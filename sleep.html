@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sleep Better</title>
+    <link href="style2.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  </head>
+  <script src = "script2.js"></script>
+</head>
+<ul>
+      <li><a class="active" href="gettingStarted.html">Getting Started</a></li>
+      <li><a class="active" href="home.html">Callibrate</a></li>
+      <li><a class="active" href="sleep.html">Relax</a></li>
+      <li><a class="active" href="breathCorrectly.html">How To Breath Correctly</a></li>
+      <li><a class="active" href="about.html">About Us</a></li>
+</ul>
+<body id = "body">
+  <br>
+  <h1><span class="gold">RELAX</h1>
+  <br>
+  <div id = "sleepDiv">
+    <p1 id = "sleepDescription">
+      This page is meant to help you steady your breathing, thus lowering your anxiety and making it easier for you
+      to fall asleep. If you are starting on this page, that means that you have already visited our "Calibrate" page,
+      which gathers data on your current breathing. We then apply that breathing rate here to provide customized relaxation
+      techniques just for you. <br><br> As you can see, you are given five options as to what soundtrack to play (none is also an option).
+      Your next step is to click the play button. Notice how a circle will appear and begin to shrink and expand. It has
+      been placed at exactly the speed made for you, based on information from the "Calibrate" page. Your job is to simply
+      listen to the soundtrack of your choice while matching your breathing to this circle. Inhale as the circle expands
+      and exhale as it shrinks. Feel free to pause and change the soundtrack at any time. <br><br>We hope this helps you leave your stress
+      behind and focus solely on your breathing!
+    </p1>
+  </div>
+  <br>
+  <label for="sound"><h2>Choose a soundtrack:</h2></label>
+  <div id = "Select">
+    <select name="sound" id="soundTrack">
+      <option value = "none">None</option>
+      <option value = "ocean">Ocean waves</option>
+      <option value = "instrumental">Instrumental</option>
+      <option value = "calm">Calm music</option>
+      <option value = "nature">Nature sounds</option>
+      <option value = "rain">Rain and music</option>
+    </select>
+  </div>
+  <audio id = "audio">
+    <source src=null type="audio/mpeg">
+  </audio>
+  <div id = "buttons">
+    <button id = "playButtonContainer" onclick = "togglePlay()">
+     <img id="playButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/play-button_opkxmt.svg" />
+    </button>
+    <!--<button class = "pauseButton" onclick = "togglePlay()">-->
+    <!-- <img id="pauseButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/pause-button_pinhpy.svg" />-->
+    <!--</button>-->
+  </div>
+  <br>
+  <div id = "Canvas">
+    <canvas id="myCanvas" width="578" height="200"></canvas>
+  </div>
+</body>
+</html>

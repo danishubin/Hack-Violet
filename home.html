@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calibrating</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+      <ul>
+        <li><a class="active" href="gettingStarted.html">Getting Started</a></li>
+        <li><a class="active" href="home.html">Callibrate</a></li>
+        <li><a class="active" href="sleep.html">Relax</a></li>
+        <li><a class="active" href="breathCorrectly.html">How To Breath Correctly</a></li>
+        <li><a class="active" href="about.html">About Us</a></li>
+      </ul>
+    <div class="stopwatch">
+      <h1><span class="gold">Getting</span>CALIBRATED</h1>
+      <p1 id = "description">
+          To get started you will have to go through a brief process that is explained below. This will not only help us
+          become more personalized for you, but also would allow you to breath calmly instead of being rushed or bored because of the
+          horrible pace. To begin, follow the steps below:
+      </p1>
+      <ol type = "1" id = "list">
+        <li>Take a deep breath</li><br>
+        <li>The moment you do, press the play button</li><br>
+        <li>When you exhale press the pause button</li><br>
+        <li>Repeat steps 1 - 3 a total of five times</li> <br>
+      </ol>
+      <h4 id = "counts">
+        0 / 5 breaths completed
+      </h4>
+      <div class="circle">
+        <span class="time" id="display">00:00:00</span>
+      </div>
+      <div class="controls">
+        <button class="buttonPlay" onclick = "start()">
+          <img id="playButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/play-button_opkxmt.svg" />
+        </button>
+
+        <button class="pauseButton" onclick = "pause()">
+           <img id="pauseButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/pause-button_pinhpy.svg" />
+        </button>
+
+      </div>
+      <div id = "completed">
+        <div id = "completedInstructions">
+          <p1>Nice Job! You have completed the calibiration! If for some reason you believe that the measurements are incorrect, either because you breathed in too
+          slowly or too quickly, press the restart button to try again.</p1>
+        </div>
+        <div id = "retryButtonDiv">
+          <button class = "retryButton" onclick = "retry()">
+            <img id="retyButton" src="https://www.clker.com/cliparts/v/U/n/u/o/E/orange-reset-button.svg.hi.png" height = 90/>
+          </button>
+        </div>
+        <div id = "continueinstructions">
+          <p1>
+            Otherwise you can <a href = "sleep.html">continue</a> on your journey through DreamScape!
+          </p1>
+        </div>
+      </div>
+      <p1 id = "time"></p1>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
